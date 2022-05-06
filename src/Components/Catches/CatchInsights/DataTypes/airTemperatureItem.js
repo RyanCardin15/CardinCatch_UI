@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DataItem from './dataItem';
+import DataItem from './BaseData/dataItem';
 
 export default class AirTemperatureItem extends Component {
     render() {
