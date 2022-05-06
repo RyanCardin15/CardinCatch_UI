@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import DataItem from './dataItem';
 
-export default class BarometricPressureItem extends Component {
+export default class AirTemperatureItem extends Component {
     render() {
         return (
             <div>
                 <div className="content">
-                    <h2 className="catches-title">Barometric Pressure</h2>
+                    <h2 className="catches-title">Air Temperature</h2>
                     <div className="table-div">
                         <div className="container-fluid heading-row mt-3">
                             <div className="row">
@@ -17,7 +17,7 @@ export default class BarometricPressureItem extends Component {
                                     <p className="table-headings">Time</p>
                                 </div>
                                 <div className="col-4 col-xs-4 col-md-3 col-lg-2 col-xl-2">
-                                    <p className="table-headings">Pressure</p>
+                                    <p className="table-headings">Temperature</p>
                                 </div>
                                 <div className="col-4 col-xs-4 col-md-3 col-lg-2 col-xl-2">
                                     <p className="table-headings">Change</p>

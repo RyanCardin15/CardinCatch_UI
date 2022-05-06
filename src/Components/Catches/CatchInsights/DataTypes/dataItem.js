@@ -13,7 +13,7 @@ export default class DataItem extends Component {
                 {this.props.Data?.changes?.map(
                     (changes, index) =>
                         <div>
-                            <CatchDataRow key={this.props.CatchData?.catchInfo?.catchId} catchId={this.props.CatchData?.catchInfo?.catchId} updateAppNav={this.props.updateAppNav} updateCatchId={this.props.updateCatchId} Date={changes?.before?.time} Time={changes?.before?.time} DataPoint={changes?.before?.dataPoint} Change={changes?.difference} Location={this.props.CatchData?.catchInfo?.stationId} />
+                            <CatchDataRow key={this.props.CatchData?.catchInfo?.catchId} catchId={this.props.CatchData?.catchInfo?.catchId} updateAppNav={this.props.updateAppNav} updateCatchId={this.props.updateCatchId} Date={changes?.before?.time} Time={changes?.before?.time} DataPoint={changes?.before?.dataPoint} Change={changes?.difference} Rank={changes?.rank} />
                         </div>
                 )}
             </div>
