@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import CatchItem from '../catchItem';
+import BarometricPressureItem from './DataTypes/barometricPressureItem';
 
 export default class CatchInsights extends Component {
     constructor(props){ 
@@ -28,8 +29,8 @@ export default class CatchInsights extends Component {
         }
 
     render() {
+        console.log(this.state.catchData?.barometricPressureModel);
         const rowColor = ['#00C4D9;','#79D7E3'];
-        const catchTest = this.state.catchData;
         return (
             <div className="content">
                 <h2 className="catches-title">Catch Information</h2>
@@ -60,6 +61,7 @@ export default class CatchInsights extends Component {
                         <CatchItem rowColor={rowColor[2 % rowColor.length]} key={this.state.catchData?.catchInfo?.catchId} catchId={this.state.catchData?.catchInfo?.catchId} updateAppNav={this.props.updateAppNav} updateCatchId={this.props.updateCatchId} Name={this.state.catchData?.catchInfo?.name} Size={this.state.catchData?.catchInfo?.size} Amount={this.state.catchData?.catchInfo?.amount} Date={this.state.catchData?.catchInfo?.date} Location={this.state.catchData?.catchInfo?.stationId} />
                     </div>
                 </div>
+                        <BarometricPressureItem Key={this.state.catchData?.catchInfo?.catchId} Data={this.state.catchData?.barometricPressureModel} catchId={this.state.catchData?.catchInfo?.catchId} updateAppNav={this.props.updateAppNav} CatchData={this.state.catchData} />
             </div>
         );
     }
