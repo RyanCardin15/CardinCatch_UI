@@ -7,10 +7,10 @@ export default class Navbar extends Component {
                 <div className="logo">
                     <p>Cardin Catch</p>
                 </div>
-                <a onClick={() => this.props.updateAppNav("catches")} href="#home">My Catches</a>
+                <a onClick={() => this.props.setAppNav("catches")} href="#home">My Catches</a>
                 <a href="#news">Log Catch</a>
                 <a href="#contact">Predictions</a>
-                <a href="#about">Conditions</a>
+                <a onClick={() => this.props.setAppNav("conditions")} href="#about">Conditions</a>
             </div>
         );
     }

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
 
 export default class CatchItem extends Component {
-    updateCatchState(){
+    updateCatchState() {
         this.props.updateAppNav("catchInsights");
         this.props.updateCatchId(this.props.catchId);
     }
@@ -10,7 +10,7 @@ export default class CatchItem extends Component {
         return (
             <div>
                 <div style={{ backgroundColor: this.props.rowColor }} className="container-fluid content-row-colored pt-4">
-                    <div className="row">
+                    <div className="row" onClick={() => this.updateCatchState()}>
                         <div className="col-4 col-xs-4 col-md-3 col-lg-2 col-xl-2">
                             <p className="table-content">{this.props.Name}</p>
                         </div>
@@ -25,9 +25,6 @@ export default class CatchItem extends Component {
                         </div>
                         <div className="col-4 col-xs-4 col-md-3 col-lg-2 col-xl-2">
                             <p className="table-content">{this.props.Location}</p>
-                        </div>
-                        <div className="col-4 col-xs-4 col-md-3 col-lg-2 col-xl-2 click-here">
-                            <a onClick={() => this.updateCatchState()} className="table-content">Click here</a>
                         </div>
                     </div>
                 </div>
