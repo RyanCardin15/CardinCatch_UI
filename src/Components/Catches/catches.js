@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react'
-import CatchItem from "../Catches/catchItem";
 import { Ellipsis } from 'react-spinners-css';
-import getCatchData from '../../Services/getCatchData';
 import { MDBDatatable } from 'mdb-react-ui-kit';
 const axios = require('axios');
 
